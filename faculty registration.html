@@ -1,0 +1,119 @@
+<DOCTYPE html>
+    <html>
+        <head>
+            <title>Faculty Registration</title>
+        </head>
+        <style>
+        body{
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            }
+            .form-container{
+            background-color: #fff;
+            padding: 30px 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            }
+            h2{
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+            }
+            label{
+                font-weight: bold;
+                display: block;
+                margin-bottom: 8px;
+                color: #444;
+            }
+            input[type="text"],
+            select{
+                width: 100%;
+                padding: 8px;
+                margin-bottom: 15px;
+                border: 1px solid #ccc;
+                border-radius: 6px;
+                box-sizing: border-box;
+            }
+            .radio-group,
+            .checkbox-group{
+                margin-bottom: 15px;
+            }
+            .radio-group,
+            .checkbox-group label{
+                font-weight: normal;
+                margin-right: 10px;
+            }
+            input[type="submit"],
+            input[type="reset"]{
+                width: 48%;
+                padding: 10px;
+                border: non=e;
+                border-radius: 6px;
+                cursor: pointer;
+                color: white;
+                font-weight: bold;
+            }
+            input[type="submit"]{
+                background-color: #4CAF50;
+                margin-right: 4%;
+            }
+            input[type="reset"]{
+                background-color: #f44336;
+            }
+            input[type="submit"]:hover{
+                background-color: #45a049;
+            }
+            input[type="reset"]:hover{
+                background-color: #e53935;
+            }
+        </style>
+        <body>
+            <form>
+                <label>Fname:</label>
+                <input type="text" name="Fname">
+                <br><br>
+                <label>Gender</label>
+                <input type="radio" name="gender" value="male" checked> Male
+                <input type="radio" name="gender" value="female"> Female
+                <input type="radio" name="gender" value="Not prefer to say" > Not prefer to say
+                <br>
+                <label>program</label>
+                <select id="program" name="program" required>
+                <option value="Certificate">Certificate</option>
+                <option value="Diploma">Diploma</option>
+                <option value="Degree">Degree</option>
+                <option value="Masters">Masters</option>
+                <option value="PostGraduate Diploma">PostGraduate Diploma</option>
+                </select>
+                <br><br>          
+                <label>Session</label>
+                <input type="checkbox" name="Session" value="Day"> Day
+                <input type="checkbox" name="Session" value="Evening"> Evening
+                <input type="checkbox" name="Session" value="Weekend"> Weekend
+                <br><br>
+                <input type="submit" value="Send">
+                <br><br>
+                <input type="reset" value="reset
+            </form>
+            <br><br>
+             <script>
+    document.getElementById("facultyForm").addEventListener("submit", function(event) {
+      event.preventDefault(); // stop default form submit
+      const fname = document.getElementById("fname").value;
+      const program = document.getElementById("program").value;
+
+      if (fname === "" || program === "") {
+        alert("Please fill out all required fields!");
+      } else {
+        alert("Form submitted successfully for: " + fname);
+      }
+    });
+  </script>
+        </body>
+    </html>
